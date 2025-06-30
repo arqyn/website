@@ -1,5 +1,5 @@
 const App = () => {
-  return <div className="flex justify-center items-center h-screen">App</div>;
+  return <></>;
 };
 
 export default App;
