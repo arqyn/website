@@ -1,5 +1,6 @@
-# Contributors
+## Contributors
 
+This project is developed and maintained by:
 
-- Dylan Tran - [@DylanBT928](https://github.com/DylanBT928)
-- Saeed Halabi - [@saeedhalabi](https://github.com/saeedhalabi)
+- [Dylan Tran](https://github.com/DylanBT928)
+- [Saeed Halabi](https://github.com/saeedhalabi)
