@@ -1,42 +1,97 @@
-import Logo from "./Logo";
-import NavLinks from "./NavLinks";
-import ActionButton from "./ActionButton";
 import { useState } from "react";
+import logoImg from "../assets/arqyn_dev_logo.jpg";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const Logo = () => {
+    return (
+      <div className="logo-container">
+        <h2 className="logo-title">Arqyn</h2>
+        <a href="/" aria-label="Homepage" className="logo-link">
+          <img src={logoImg} alt="Arqyn Dev Logo" className="logo-image" />
+        </a>
+      </div>
+    );
+  };
+
+  const NavLinks = () => {
+    return (
+      <nav aria-label="Main navigation" className="nav-links">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a href="#about" className="nav-link">
+              About
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#projects" className="nav-link">
+              Projects
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#services" className="nav-link">
+              Services
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    );
+  };
+
+  const ActionButton = () => {
+    return (
+      <button className="action-button">
+        <a
+          href="https://www.linkedin.com/company/arqyn-dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="action-button-link"
+        >
+          Learn More
+        </a>
+      </button>
+    );
+  };
+
   return (
-    <nav className="flex justify-around mx-auto items-center mt-5 font-poppins text-base container relative">
+    <nav className="navbar">
       <Logo />
       {/* Desktop Nav */}
-      <div className="hidden md:flex items-center gap-4">
+      <div className="navbar-desktop">
         <NavLinks />
         <ActionButton />
       </div>
       {/* Hamburger Icon for Mobile */}
       <button
-        className="md:hidden flex flex-col justify-center items-center w-10 h-10 z-20"
+        className="hamburger-button"
         onClick={() => setMobileOpen((prev) => !prev)}
         aria-label="Toggle mobile menu"
       >
-        <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-        <span className={`block h-0.5 w-6 bg-black my-1 transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`}></span>
-        <span className={`block h-0.5 w-6 bg-black transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        <span
+          className={`hamburger-line top ${mobileOpen ? "open" : ""}`}
+        ></span>
+        <span
+          className={`hamburger-line middle ${mobileOpen ? "open" : ""}`}
+        ></span>
+        <span
+          className={`hamburger-line bottom ${mobileOpen ? "open" : ""}`}
+        ></span>
       </button>
       {/* Mobile Menu */}
-      <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg z-10 transform transition-transform duration-300 md:hidden flex flex-col items-center pt-20 gap-8 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
-      >
+      <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
         <NavLinks />
         <ActionButton />
       </div>
       {/* Overlay */}
       {mobileOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-30 z-0 md:hidden"
-          onClick={() => setMobileOpen(false)}
-        />
+        <div className="mobile-overlay" onClick={() => setMobileOpen(false)} />
       )}
     </nav>
   );
