@@ -18,7 +18,7 @@
 .hero-main-text {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: clamp(8rem, 15vw, 20rem);
+  font-size: clamp(10rem, 18vw, 24rem);
   line-height: 0.8;
   text-align: center;
   letter-spacing: -0.02em;
@@ -31,7 +31,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -48,10 +48,10 @@
 
 .hero-subtitle {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
-  color: #cccccc;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: #ffffff;
+  line-height: 1.1;
   margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -69,9 +69,8 @@
 
 .hero-tagline-highlight {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(1.8rem, 3.5vw, 3rem);
-  color: #ffffff;
   line-height: 1.1;
   text-transform: uppercase;
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
@@ -131,7 +130,7 @@
   }
 
   .hero-main-text {
-    font-size: clamp(4rem, 12vw, 8rem);
+    font-size: clamp(5rem, 15vw, 10rem);
     margin-bottom: 2rem;
   }
 
@@ -147,10 +146,7 @@
     padding: 0;
   }
 
-  .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-  }
-
+  .hero-subtitle,
   .hero-tagline,
   .hero-tagline-highlight {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -159,13 +155,10 @@
 
 @media (max-width: 480px) {
   .hero-main-text {
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(3.5rem, 12vw, 7rem);
   }
 
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
+  .hero-subtitle,
   .hero-tagline,
   .hero-tagline-highlight {
     font-size: 1.5rem;
