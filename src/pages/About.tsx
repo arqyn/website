@@ -3,6 +3,76 @@ import Navbar from "../components/Navbar";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
+    const teamMembers = [
+    {
+      id: 1,
+      name: "John Doe",
+      role: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+
+    {
+      id: 2,
+      name: "Jane Smith",
+      role: "Lead Developer",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait2.jpg",
+      social: {
+        github: "#",
+        linkedin: "#",
+      },
+    },
+    {
+      id: 3,
+      name: "John Doe",
+      role: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      id: 4,
+      name: "John Doe",
+      role: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      id: 5,
+      name: "Jane Smith",
+      role: "Lead Developer",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait2.jpg",
+      social: {
+        github: "#",
+        linkedin: "#",
+      },
+    },
+    {
+      id: 6,
+      name: "John Doe",
+      role: "Founder & CEO",
+      bio: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus mollitia harum, obcaecati eum doloremque consequuntur explicabo veniam quod? Vero, officiis.",
+      image: "/portrait.jpg",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+  ];
+
   
 
   return (
@@ -134,6 +204,103 @@ const About = () => {
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
+            Meet The Team
+          </h2>
+          <p className="text-lg mb-6 font-merriweather">
+            Meet the passionate individuals behind Arqyn, committed to making a
+            difference through technology. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Tempora iure ad porro animi recusandae
+            incidunt laudantium eligendi, vitae consequuntur laborum quis
+            fugiat? Velit molestias quam ut tempore aspernatur voluptatem earum
+            soluta quo vel impedit voluptates eum dolorum ratione aliquid at,
+            temporibus voluptatibus! In itaque magni unde velit nam eveniet
+            quibusdam cumque, voluptatibus repellat expedita eaque dolor,
+            obcaecati at placeat corrupti doloremque. Id voluptas quaerat minima
+            ad fugiat vel natus adipisci qui numquam at, soluta ea! Magnam id
+            ullam itaque eum rerum blanditiis? Quia vero deleniti placeat enim
+            repudiandae reprehenderit ipsa recusandae, veritatis tempore
+            voluptate inventore natus dignissimos autem corporis repellat?
+          </p>
+
+          <p className="text-lg mb-6 font-merriweather">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            iure ad porro animi recusandae incidunt laudantium eligendi, vitae
+            consequuntur laborum quis fugiat? Velit molestias quam ut tempore
+            aspernatur voluptatem earum soluta quo vel impedit voluptates eum
+            dolorum ratione aliquid at, temporibus voluptatibus! In itaque magni
+            unde velit nam eveniet quibusdam cumque, voluptatibus repellat
+            expedita eaque dolor, obcaecati at placeat corrupti doloremque. Id
+            voluptas quaerat minima ad fugiat vel natus adipisci qui numquam at,
+            soluta ea! Magnam id ullam itaque eum rerum blanditiis? Quia vero
+            deleniti placeat enim repudiandae reprehenderit ipsa recusandae,
+            veritatis tempore voluptate inventore natus dignissimos autem
+            corporis repellat?
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            {teamMembers.map((member) => (
+              <div
+                key={member.id}
+                className="bg-black rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                {/* Team Member Image with Social Icons */}
+                <div className="relative group w-full h-90">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  {/* Social Icons overlay */}
+                  <div className="absolute bottom-4 left-4 flex gap-3">
+                    {member.social.linkedin && (
+                      <a
+                        href={member.social.linkedin}
+                        className="bg-black/80 text-white p-2 rounded-full hover:bg-blue-600 transition-colors"
+                      >
+                        <FaLinkedin size={18} />
+                      </a>
+                    )}
+                    {member.social.github && (
+                      <a
+                        href={member.social.github}
+                        className="bg-black/80 text-white p-2 rounded-full hover:bg-gray-700 transition-colors"
+                      >
+                        <FaGithub size={18} />
+                      </a>
+                    )}
+                    {member.social.twitter && (
+                      <a
+                        href={member.social.twitter}
+                        className="bg-black/80 text-white p-2 rounded-full hover:bg-blue-400 transition-colors"
+                      >
+                        <FaTwitter size={18} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                {/* Team Member Details */}
+                <div className="p-6 text-left">
+                  <p className="text-white font-medium font-poppins">
+                    {member.role}
+                  </p>
+                  <hr className="border-gray-700 my-3" />
+                  <h3 className="text-xl font-bold mb-3 font-poppins">
+                    {member.name}
+                  </h3>
+                  <p className="text-gray-300 font-merriweather">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
