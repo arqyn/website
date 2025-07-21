@@ -74,6 +74,69 @@ const About = () => {
           </div>
         </section>
 
+        {/* Stats */}
+
+        {/* Mission Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
+                Our Mission
+              </h2>
+              <p className="text-lg mb-6 font-merriweather">
+                At Arqyn, we believe technology should serve humanity, not the
+                other way around. We're dedicated to creating tools that address
+                real social challenges, from civic engagement to environmental
+                sustainability.
+              </p>
+              <p className="text-lg mb-6 font-merriweather">
+                Our team of technologists, designers, and community organizers
+                work together to build solutions that are both impactful and
+                accessible.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-8 rounded-xl">
+              <div className="bg-black p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 font-poppins">
+                  Core Values
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span className="font-merriweather">
+                      Social impact first
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span className="font-merriweather">
+                      Open and transparent
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span className="font-merriweather">
+                      Community-driven design
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span className="font-merriweather">
+                      Sustainable solutions
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-400 mr-3">✓</span>
+                    <span className="font-merriweather">
+                      Remote-first collaboration
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         
       </div>
     </>
