@@ -1,4 +1,6 @@
+import { Link } from "react-router";
 import Navbar from "../components/Navbar";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
   
@@ -36,7 +38,43 @@ const About = () => {
           </div>
         </section>
 
-       
+        {/* Our Story Section */}
+        <section className="text-white py-16 px-4  lg:px-8 max-w-7xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 font-poppins md:text-center">
+            Our Story
+          </h1>
+
+          <div>
+            <p className="text-lg mb-6 font-merriweather">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+              ipsa. Voluptate nisi iusto vero laboriosam cumque quaerat repellat
+              rerum mollitia quo velit placeat fuga voluptas, consectetur eius
+              dolorum minima sunt sequi nesciunt at quod! Possimus, vel fuga
+              nesciunt laborum eius ipsum laudantium. Pariatur animi, ad eaque
+              harum nemo quidem in.Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Porro ipsa facilis vero minus quo alias,
+              molestiae quas corporis, adipisci deserunt harum libero quae?
+              Illum odio deserunt dolor. Voluptatem rerum necessitatibus
+              sapiente nisi beatae libero unde aut soluta itaque veritatis id
+              qui magnam ut, quod saepe labore a quam tempore odit.
+            </p>
+            <p className="text-lg mb-6 font-merriweather">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              ipsa facilis vero minus quo alias, molestiae quas corporis,
+              adipisci deserunt harum libero quae? Illum odio deserunt dolor.
+              Voluptatem rerum necessitatibus sapiente nisi beatae libero unde
+              aut soluta itaque veritatis id qui magnam ut, quod saepe labore a
+              quam tempore odit.Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Est, ipsa. Voluptate nisi iusto vero laboriosam
+              cumque quaerat repellat rerum mollitia quo velit placeat fuga
+              voluptas, consectetur eius dolorum minima sunt sequi nesciunt at
+              quod! Possimus, vel fuga nesciunt laborum eius ipsum laudantium.
+              Pariatur animi, ad eaque harum nemo quidem in.
+            </p>
+          </div>
+        </section>
+
+        
       </div>
     </>
   );
