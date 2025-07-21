@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
-    const teamMembers = [
+  const teamMembers = [
     {
       id: 1,
       name: "John Doe",
@@ -72,8 +72,6 @@ const About = () => {
       },
     },
   ];
-
-  
 
   return (
     <>
@@ -304,7 +302,22 @@ const About = () => {
           </div>
         </section>
 
-        
+        {/* Connect with us */}
+        <section className="py-10 px-4 sm:px-6 lg:px-8  text-center bg-[#1e1e1f]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
+            Connect with Us
+          </h2>
+          <p className="text-lg mb-6 font-merriweather">
+            We’d love to hear from you! Whether you have a question, feedback,
+            or just want to say hi, feel free to reach out.
+          </p>
+          <Link
+            to="#"
+            className="inline-block font-bold bg-[#374053] text-white py-2 px-4 rounded-lg hover:bg-white hover:scale-105 hover:text-black transition-colors"
+          >
+            Get in Touch
+          </Link>
+        </section>
       </div>
     </>
   );
