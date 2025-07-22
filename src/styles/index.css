@@ -5,6 +5,10 @@
   background-color: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Utility class for headings, buttons, UI text */
 .font-poppins {
   font-family: "Poppins", sans-serif;

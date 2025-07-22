@@ -74,7 +74,7 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-black text-white min-h-screen mt-5">
+      <div className="bg-black text-white min-h-screen mt-5" id="about">
         {/* Hero Section with Background Image */}
         <section
           className="relative py-40 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
@@ -143,7 +143,10 @@ const About = () => {
         {/* Stats */}
 
         {/* Mission Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section
+          className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+          id="services"
+        >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
@@ -301,7 +304,10 @@ const About = () => {
         </section>
 
         {/* Connect with us */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8  text-center bg-[#1e1e1f]">
+        <section
+          className="py-10 px-4 sm:px-6 lg:px-8  text-center bg-[#1e1e1f]"
+          id="contact"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-poppins">
             Connect with Us
           </h2>
@@ -310,7 +316,7 @@ const About = () => {
             or just want to say hi, feel free to reach out.
           </p>
           <Link
-            to="#"
+            to="https://forms.gle/ftUMrUfHQWcURee88"
             className="inline-block font-bold bg-[#374053] text-white py-2 px-4 rounded-lg hover:bg-white hover:scale-105 hover:text-black transition-colors"
           >
             Get in Touch
