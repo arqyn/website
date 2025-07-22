@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import Navbar from "../components/Navbar";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
@@ -75,7 +74,6 @@ const About = () => {
 
   return (
     <>
-      <Navbar />
       <div className="bg-black text-white min-h-screen mt-5">
         {/* Hero Section with Background Image */}
         <section
@@ -242,7 +240,7 @@ const About = () => {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            {teamMembers.map((member) => (
+            {teamMembers.map(member => (
               <div
                 key={member.id}
                 className="bg-black rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
