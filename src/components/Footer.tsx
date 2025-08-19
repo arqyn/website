@@ -1,3 +1,8 @@
+/*
+* 1. Use variables for repeating numbers like 'size={18}'
+* 2. Use variable for 'new Date().getFullYear()'
+*/
+
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
@@ -6,7 +11,7 @@ const Footer = () => {
         {/* divider */}
         <div className="border-t border-white"></div>
 
-        {/* Footer Content */}
+      {/* Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo */}
