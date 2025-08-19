@@ -1,3 +1,5 @@
+/* 1. Create an array and iterate over it -> on each iteration create a list item, instead of having the same list item a thousand times */
+
 import { Link } from "react-router";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
