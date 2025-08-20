@@ -2,11 +2,7 @@ import { Link } from "react-router";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
-  /* 
-  List of core values used in the "Our Mission" section.
-  These values are mapped into <li> elements inside a <ul> to avoid repetition.
-*/
-  const coreValues = [
+  const missionKeyPoints = [
     "Social impact first",
     "Open and transparent",
     "Community-driven design",
@@ -185,7 +181,7 @@ const About = () => {
                   Core Values
                 </h3>
                 <ul className="space-y-4">
-                  {coreValues.map(value => (
+                  {missionKeyPoints.map(value => (
                     <li key={value} className="flex items-start">
                       <span className="text-blue-400 mr-3">✓</span>
                       <span className="font-merriweather">{value}</span>
