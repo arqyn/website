@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   // Get the current year dynamically to keep the footer up to date automatically
-  const date = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   // Reusable icon size for consistent styling across social icons
   const iconSize = 18;
@@ -133,7 +133,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white mt-12 pt-6">
           <p className="text-gray-200 text-sm font-merriweather text-center">
-            © {date} Arqyn. All rights reserved.
+            © {currentYear} Arqyn. All rights reserved.
           </p>
 
           {/* Not sure if this will be needed later */}
