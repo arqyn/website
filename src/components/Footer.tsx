@@ -1,15 +1,16 @@
-/*
-* 1. Use variables for repeating numbers like 'size={18}'
-* 2. Use variable for 'new Date().getFullYear()'
-*/
-
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
+  // Get the current year dynamically to keep the footer up to date automatically
+  const currentYear = new Date().getFullYear();
+
+  // Reusable icon size for consistent styling across social icons
+  const iconSize = 18;
+
   return (
     <footer className=" text-white border-t border-gray-800">
-        {/* divider */}
-        <div className="border-t border-white"></div>
+      {/* divider */}
+      <div className="border-t border-white"></div>
 
       {/* Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -29,7 +30,6 @@ const Footer = () => {
               empowerment.
             </p>
           </div>
-
 
           {/* Navigation Links */}
           <div className="flex justify-start md:justify-center">
@@ -82,7 +82,6 @@ const Footer = () => {
             </div>
           </div>
 
-
           {/* Social & Contact */}
           <div className="flex justify-start md:justify-end">
             <div>
@@ -95,7 +94,7 @@ const Footer = () => {
                     href="#"
                     className="text-gray-400 hover:text-blue-400 transition-colors flex items-center"
                   >
-                    <FaLinkedin size={18} className="mr-2" />
+                    <FaLinkedin size={iconSize} className="mr-2" />
                     <span className="font-merriweather text-sm">LinkedIn</span>
                   </a>
                 </div>
@@ -104,7 +103,7 @@ const Footer = () => {
                     href="#"
                     className="text-gray-400 hover:text-gray-300 transition-colors flex items-center"
                   >
-                    <FaGithub size={18} className="mr-2" />
+                    <FaGithub size={iconSize} className="mr-2" />
                     <span className="font-merriweather text-sm">GitHub</span>
                   </a>
                 </div>
@@ -113,7 +112,7 @@ const Footer = () => {
                     href="#"
                     className="text-gray-400 hover:text-blue-500 transition-colors flex items-center"
                   >
-                    <FaTwitter size={18} className="mr-2" />
+                    <FaTwitter size={iconSize} className="mr-2" />
                     <span className="font-merriweather text-sm">X</span>
                   </a>
                 </div>
@@ -122,7 +121,7 @@ const Footer = () => {
                     href="#"
                     className="text-gray-400 hover:text-red-400 transition-colors flex items-center"
                   >
-                    <FaEnvelope size={18} className="mr-2" />
+                    <FaEnvelope size={iconSize} className="mr-2" />
                     <span className="font-merriweather text-sm">Email</span>
                   </a>
                 </div>
@@ -131,11 +130,10 @@ const Footer = () => {
           </div>
         </div>
 
-
         {/* Copyright */}
         <div className="border-t border-white mt-12 pt-6">
           <p className="text-gray-200 text-sm font-merriweather text-center">
-            © {new Date().getFullYear()} Arqyn. All rights reserved.
+            © {currentYear} Arqyn. All rights reserved.
           </p>
 
           {/* Not sure if this will be needed later */}
