@@ -1,3 +1,9 @@
+/* 
+* 1. Add CSS variables instead of using magic numbers 
+* 2. Clamp is used to not have to mess with font sizes in media queries so just use clamp and don't change the font-size in the media queries
+* Hint: Play around with the screen size and make sure the font is readable on small screens
+*/
+
 .hero-section-new {
   min-height: 100vh;
   background: #000000;
