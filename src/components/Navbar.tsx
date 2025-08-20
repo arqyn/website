@@ -1,6 +1,6 @@
 /*
-* 1. use a loop for repeating code hint: span
-*/
+ * 1. use a loop for repeating code hint: span
+ */
 
 import { useState } from "react";
 import logoImg from "../assets/arqyn_dev_logo.jpg";
@@ -75,18 +75,15 @@ const Navbar = () => {
       {/* Hamburger Icon for Mobile */}
       <button
         className="hamburger-button"
-        onClick={() => setMobileOpen((prev) => !prev)}
+        onClick={() => setMobileOpen(prev => !prev)}
         aria-label="Toggle mobile menu"
       >
-        <span
-          className={`hamburger-line top ${mobileOpen ? "open" : ""}`}
-        ></span>
-        <span
-          className={`hamburger-line middle ${mobileOpen ? "open" : ""}`}
-        ></span>
-        <span
-          className={`hamburger-line bottom ${mobileOpen ? "open" : ""}`}
-        ></span>
+        {["top", "middle", "bottom"].map(position => (
+          <span
+            key={position}
+            className={`hamburger-line ${position} ${mobileOpen ? "open" : ""}`}
+          ></span>
+        ))}
       </button>
       {/* Mobile Menu */}
       <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
