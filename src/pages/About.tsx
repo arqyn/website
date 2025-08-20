@@ -1,9 +1,23 @@
-/* 1. Create an array and iterate over it -> on each iteration create a list item, instead of having the same list item a thousand times */
-
 import { Link } from "react-router";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
+  /* 
+  List of core values used in the "Our Mission" section.
+  These values are mapped into <li> elements inside a <ul> to avoid repetition.
+*/
+  const coreValues = [
+    "Social impact first",
+    "Open and transparent",
+    "Community-driven design",
+    "Sustainable solutions",
+    "Remote-first collaboration",
+  ];
+
+  /* 
+  Array of team members used in the "Meet the Team" section.
+  Each object contains profile info and optional social media links.
+*/
   const teamMembers = [
     {
       id: 1,
@@ -16,7 +30,6 @@ const About = () => {
         twitter: "#",
       },
     },
-
     {
       id: 2,
       name: "Jane Smith",
@@ -172,36 +185,12 @@ const About = () => {
                   Core Values
                 </h3>
                 <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-3">✓</span>
-                    <span className="font-merriweather">
-                      Social impact first
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-3">✓</span>
-                    <span className="font-merriweather">
-                      Open and transparent
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-3">✓</span>
-                    <span className="font-merriweather">
-                      Community-driven design
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-3">✓</span>
-                    <span className="font-merriweather">
-                      Sustainable solutions
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-3">✓</span>
-                    <span className="font-merriweather">
-                      Remote-first collaboration
-                    </span>
-                  </li>
+                  {coreValues.map(value => (
+                    <li key={value} className="flex items-start">
+                      <span className="text-blue-400 mr-3">✓</span>
+                      <span className="font-merriweather">{value}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
