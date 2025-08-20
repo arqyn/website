@@ -1,7 +1,3 @@
-/*
- * 1. use a loop for repeating code hint: span
- */
-
 import { useState } from "react";
 import logoImg from "../assets/arqyn_dev_logo.jpg";
 import "../styles/Navbar.css";
