@@ -1,22 +1,29 @@
-/* 
-* 1. Add CSS variables instead of using magic numbers 
-* 2. Clamp is used to not have to mess with font sizes in media queries so just use clamp and don't change the font-size in the media queries
-* Hint: Play around with the screen size and make sure the font is readable on small screens
-*/
+:root {
+  --max-width-container: 1400px;
+  --max-width-grid: 1200px;
+  --section-padding: 2rem;
+  --gap: 4rem;
+  --font-main-large: clamp(10rem, 18vw, 24rem);
+  --font-subtitle: clamp(1.8rem, 3.5vw, 3rem);
+  --font-tagline: clamp(1.8rem, 3.5vw, 3rem);
+  --font-tagline-small: clamp(1.5rem, 3vw, 2.5rem);
+  --font-color: #ffffff;
+  --gradient-text: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
 
 .hero-section-new {
   min-height: 100vh;
   background: #000000;
-  color: white;
+  color: var(--font-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: var(--section-padding);
   overflow: hidden;
 }
 
 .hero-container-new {
-  max-width: 1400px;
+  max-width: var(--max-width-container);
   width: 100%;
   position: relative;
 }
@@ -24,62 +31,53 @@
 .hero-main-text {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: clamp(10rem, 18vw, 24rem);
+  font-size: var(--font-main-large);
   line-height: 0.8;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #ffffff;
-  margin-bottom: 4rem;
+  color: var(--font-color);
+  margin-bottom: var(--gap);
   text-transform: uppercase;
 }
 
 .hero-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: var(--gap);
   align-items: start;
-  max-width: 1200px;
+  max-width: var(--max-width-grid);
   margin: 0 auto;
 }
 
 .hero-left {
   text-align: left;
-  padding-left: 2rem;
+  padding-left: var(--section-padding);
 }
 
 .hero-right {
   text-align: right;
-  padding-right: 2rem;
+  padding-right: var(--section-padding);
 }
 
-.hero-subtitle {
+.hero-subtitle,
+.hero-tagline {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  color: #ffffff;
+  font-size: var(--font-subtitle);
+  color: var(--font-color);
   line-height: 1.1;
   margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.hero-tagline {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  color: #ffffff;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
 .hero-tagline-highlight {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: var(--font-tagline);
   line-height: 1.1;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -150,23 +148,5 @@
   .hero-right {
     text-align: center;
     padding: 0;
-  }
-
-  .hero-subtitle,
-  .hero-tagline,
-  .hero-tagline-highlight {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-main-text {
-    font-size: clamp(3.5rem, 12vw, 7rem);
-  }
-
-  .hero-subtitle,
-  .hero-tagline,
-  .hero-tagline-highlight {
-    font-size: 1.5rem;
   }
 }
